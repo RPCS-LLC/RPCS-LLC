@@ -25,4 +25,14 @@
   yearTargets.forEach(function (node) {
     node.textContent = year;
   });
+
+  var config = window.SITE_CONFIG || {};
+  if (config.discoveryCallUrl) {
+    var discoveryLinks = document.querySelectorAll('[data-discovery-link]');
+    discoveryLinks.forEach(function (link) {
+      link.setAttribute('href', config.discoveryCallUrl);
+      link.setAttribute('target', '_blank');
+      link.setAttribute('rel', 'noopener noreferrer');
+    });
+  }
 })();

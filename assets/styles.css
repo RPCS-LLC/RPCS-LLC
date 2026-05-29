@@ -109,6 +109,7 @@ a:hover {
 .main-nav a {
   display: inline-block;
   padding: 0.55rem 0.8rem;
+  white-space: nowrap;
   border-radius: 999px;
   color: var(--ink-700);
   font-weight: 600;
